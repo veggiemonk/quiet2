@@ -1,6 +1,8 @@
 -- written thanks to an awesome NeovimConf 2022 video by DevOnDuty
 -- link to talk: https://www.youtube.com/watch?v=PdaObkGazoU
 
+-- syntax hightlight group: https://neovim.io/doc/user/syntax.html#highlight-groups
+--
 -- Note: To find which highlight name you need to use, put the
 --   cursor over it and type `:Inspect`.
 
@@ -21,7 +23,8 @@ local c = {
   platinium = "#dadada",
   black = "#101010",
   black_eerie = "#1c1c1c",
-  black_jet = "#303030",
+  -- black_jet = "#303030",
+  black_jet = "#404040",
 
   comment = "#a8a8a8",
   fg = "#dadada",
@@ -44,7 +47,6 @@ local c = {
   orange_web = "#ffaf00",
 
   pink_ultra = "#ff5fff",
-  hollywood_cesire = "#ff00af",
   rose_dogwood = "#d7005f",
   red_indian = "#d75f5f",
   red_folly = "#ff005f",
@@ -68,7 +70,7 @@ local default_fg_bg = { fg = c.fg, bg = c.bg }
 local groups = {
   Normal = default_fg_bg,
   -- stylua: ignore start
-  ColorColumn =   { fg = c.none,            bg = c.black_eerie },
+  ColorColumn =   { fg = c.none,            bg = c.bg_alt },
   Conceal =       { fg = c.none,            bg = c.none },
   CurSearch =     { fg = c.pink_ultra,      bg = c.black_jet },
   Cursor =        { fg = c.none,            bg = c.none,          style = "reverse" },
@@ -112,31 +114,31 @@ local groups = {
   SignColumn =    { fg = c.platinium,       bg = c.none },
   SpecialKey =    { fg = c.gray_dim,        bg = c.none,          style = "bold" },
 
-  StatusLine =    { fg = c.black_jet,       bg = c.platinium,     style = "bold" },
-  StatusLineNC =  { fg = c.gray_dim,        bg = c.black_jet },
-  TabLine =       { fg = c.gray_dim,        bg = c.black_jet },
-  TabLineFill =   { fg = c.platinium,       bg = c.none },
-  TabLineSel =    { fg = c.black_jet,       bg = c.platinium },
-  Title =         { fg = c.none,            bg = c.none },
-  VertSplit =     { fg = c.gray_dim,        bg = c.black_jet },
-  Visual =        { fg = c.black_eerie,     bg = c.blue_rudy },
-  VisualNOS =     { fg = c.none,            bg = c.black_jet },
-  WarningMsg =    { fg = c.platinium,       bg = c.none },
-  WildMenu =      { fg = c.blue_picton,     bg = c.black_jet,     style = "bold" },
   Comment =       { fg = c.comment,         bg = c.none },
   Constant =      { fg = c.gray_silver,     bg = c.none },
+  CursorIM =      { fg = c.black_jet,       bg = c.green_light_sea },
   Error =         { fg = c.red_folly,       bg = c.black_jet,     style = "bold" },
   Identifier =    { fg = c.platinium,       bg = c.none },
   Ignore =        { fg = c.platinium,       bg = c.none },
   PreProc =       { fg = c.platinium,       bg = c.none },
   Special =       { fg = c.platinium,       bg = c.none },
   Statement =     { fg = c.platinium,       bg = c.none },
+  StatusLine =    { fg = c.black_jet,       bg = c.platinium,     style = "bold" },
+  StatusLineNC =  { fg = c.gray_dim,        bg = c.black_jet },
+  TabLine =       { fg = c.gray_dim,        bg = c.black_jet },
+  TabLineFill =   { fg = c.platinium,       bg = c.none },
+  TabLineSel =    { fg = c.black_jet,       bg = c.platinium },
+  Title =         { fg = c.none,            bg = c.none },
   Todo =          { fg = c.aquamarine,      bg = c.none },
+  ToolbarButton = { fg = c.platinium,       bg = c.black_jet,     style = "bold" },
+  ToolbarLine =   { fg = c.none,            bg = c.black_jet },
   Type =          { fg = c.platinium,       bg = c.none },
   Underlined =    { fg = c.platinium,       bg = c.none },
-  CursorIM =      { fg = c.black_jet,       bg = c.green_light_sea },
-  ToolbarLine =   { fg = c.none,            bg = c.black_jet },
-  ToolbarButton = { fg = c.platinium,       bg = c.black_jet,     style = "bold" },
+  VertSplit =     { fg = c.gray_dim,        bg = c.black_jet },
+  Visual =        { fg = c.black_eerie,     bg = c.blue_rudy },
+  VisualNOS =     { fg = c.none,            bg = c.black_jet },
+  WarningMsg =    { fg = c.platinium,       bg = c.none },
+  WildMenu =      { fg = c.blue_picton,     bg = c.black_jet,     style = "bold" },
   -- stylua: ignore end
 
   Terminal = { link = "Normal" },
